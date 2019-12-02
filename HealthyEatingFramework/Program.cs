@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace HealthyEatingFramework
 {
-    
+    public enum DisplayPeriod { day, week, month };
     class Program
     {
         List<Foods> Foods = new List<Foods>();
+        
         static void Main(string[] args)
         {
 
@@ -30,6 +31,7 @@ namespace HealthyEatingFramework
         public string Name { get; set; }
         public int Protein { get; set; }
         public int Fat { get; set; }
+
         public int Carbs { get; set; }
         public int OverallHealthRating { get; set; }
         private static int FoodsCount;  //counter for types of food 
@@ -90,4 +92,26 @@ namespace HealthyEatingFramework
         }
 
     }
+
+    class applicationDisplay
+    {
+
+        public DisplayPeriod periodofdisplay { get; set; }
+
+       public void DisplayRatings(int UserHealth, DisplayPeriod periodofdisplay)
+        {
+            // will work out the if the user has a good score depending 
+            // on what is eating for a given time period.  
+        }
+
+        public void DisplayTimetable (string CourseCode)
+        {
+            //will display the timetable bassed on the coursecode and current date.
+        }
+
+
+
+    }
+
+
 }
